@@ -1,0 +1,28 @@
+<button (click)="increment1()">Increment</button>
+
+
+<mat-paginator
+  [pageSize]="pageSize"
+  [length]="allRows.length"
+  [pageIndex]="pageIndex"
+  (page)="onPageChange($event)">
+</mat-paginator>
+<div *cachedFor="let row of pageRows; trackBy: trackByFn; cacheProvider: cachedViews" class="row-table">
+  <span>{{row.rowId}}</span>
+  <span>{{row.name}}</span>
+  <span *ngIf="counter1>5">{{counter1}}</span>
+</div>
+
+<button (click)="increment()">Increment</button>
+
+<mat-paginator
+  [pageSize]="pageSize2"
+  [length]="allRows2.length"
+  [pageIndex]="pageIndex2"
+  (page)="onPageChange2($event)">
+</mat-paginator>
+<div *cachedFor="let row of pageRows2; trackBy: trackByFn; cacheProvider: cachedViews" class="row-table">
+  <span>{{row.rowId}}</span>
+  <span>{{row.name}}</span>
+  <span *ngIf="counter>5">{{counter}}</span>
+</div>

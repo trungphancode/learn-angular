@@ -1,0 +1,11 @@
+<div class="menu">
+  <label>
+    Tutorials:
+    <select (change)="selectTutorial($event.target.value)">
+      <option>-- Select tutorial --</option>
+      <option value="/cd">Change Detection</option>
+      <option value="/for">Custom For</option>
+    </select>
+  </label>
+</div>
+<router-outlet></router-outlet>
